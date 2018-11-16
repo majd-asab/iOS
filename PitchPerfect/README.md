@@ -1,3 +1,3 @@
 # PitchPerfect iOS App
 
-![alt text](./recording)
+![alt text](./recording.gif)
