@@ -12,3 +12,7 @@ The course went over several concepts in iOS and Xcode:
 4. ViewController
 5. UINavigationController
 6. StackView
+7. AVAudioRecorder
+8. UIButtons
+9. IBActions
+10. IBOutlets
