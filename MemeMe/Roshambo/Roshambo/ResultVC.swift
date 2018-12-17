@@ -38,26 +38,36 @@ class ResultVC: UIViewController {
     
     func displayResult() {
         if let resValue = resultValue {
+            let name: String
             switch resValue {
             case 0:
                 self.resultText.text = zero
+                name = "itsATie"
             case 1:
                 self.resultText.text = one
+                name = "PaperCoversRock"
             case 2:
                 self.resultText.text = two
+                name = "RockCrushesScissors"
             case 3:
                 self.resultText.text = three
+                 name = "PaperCoversRock"
             case 4:
                 self.resultText.text = four
+                 name = "ScissorsCutPaper"
             case 5:
                 self.resultText.text = five
+                name = "RockCrushesScissors"
             case 6:
                 self.resultText.text = six
+                name = "ScissorsCutPaper"
             default:
                 self.resultText.text = seven
+                name = "itsATie"
             }
-            
+            self.imageOfResult.image = UIImage(named: name)
         }
+        
     }
     
     @IBAction func playAgain(_ sender: Any) {

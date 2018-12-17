@@ -34,6 +34,8 @@ class ViewController: UIViewController {
         paperButton.tag    = 2
         scissorsButton.tag = 3
         
+        rockButton.setImage(UIImage(named: "rock"), for: .normal)
+        
         view.addSubview(rockButton)
         view.addSubview(paperButton)
         view.addSubview(scissorsButton)
@@ -42,7 +44,7 @@ class ViewController: UIViewController {
         
         paperButton.addTarget(self, action: #selector(self.playPaper), for: UIControl.Event.touchUpInside)
         
-//        scissorsButton.addTarget(self, action: #selector(self.play), for: UIControl.Event.touchUpInside)
+        scissorsButton.addTarget(self, action: #selector(self.playScissors), for: UIControl.Event.touchUpInside)
         
     }
     
@@ -109,6 +111,10 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "segueToResultVC", sender: sender)
     }
     
+    @IBAction func playScissors(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueToResultVC", sender: sender)
+    }
+    
     // prepare segue information to pass
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -118,6 +124,8 @@ class ViewController: UIViewController {
             controller.resultValue = result
         }
     }
+    
+    
 
 }
 

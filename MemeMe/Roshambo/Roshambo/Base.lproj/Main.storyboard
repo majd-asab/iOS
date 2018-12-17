@@ -44,6 +44,10 @@
                                     <action selector="playAgain:" destination="wfq-0r-60F" eventType="touchUpInside" id="c4k-Ax-osf"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CvG-vy-Jx0">
+                                <rect key="frame" x="67" y="148" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="result text placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjb-R0-H6S">
                                 <rect key="frame" x="80" y="50" width="214" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -56,6 +60,7 @@
                         <viewLayoutGuide key="safeArea" id="Snz-Sm-AGT"/>
                     </view>
                     <connections>
+                        <outlet property="imageOfResult" destination="CvG-vy-Jx0" id="5Qd-Yh-1hB"/>
                         <outlet property="resultText" destination="Sjb-R0-H6S" id="9cP-kS-ic3"/>
                     </connections>
                 </viewController>
