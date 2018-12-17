@@ -18,9 +18,9 @@ class ViewController: UIViewController {
         let paperButton    = UIButton()
         let scissorsButton = UIButton()
         
-        rockButton.setTitle("rock", for: UIControl.State.normal)
-        paperButton.setTitle("paper", for: UIControl.State.normal)
-        scissorsButton.setTitle("scissors", for: UIControl.State.normal)
+//        rockButton.setTitle("rock", for: UIControl.State.normal)
+//        paperButton.setTitle("paper", for: UIControl.State.normal)
+//        scissorsButton.setTitle("scissors", for: UIControl.State.normal)
         
         rockButton.frame = CGRect(x: 50, y: 150, width: 100, height: 100)
         paperButton.frame = CGRect(x: 110, y: 150, width: 100, height: 100)
@@ -35,6 +35,8 @@ class ViewController: UIViewController {
         scissorsButton.tag = 3
         
         rockButton.setImage(UIImage(named: "rock"), for: .normal)
+        paperButton.setImage(UIImage(named: "paper"), for: .normal)
+        scissorsButton.setImage(UIImage(named: "scissors"), for: .normal)
         
         view.addSubview(rockButton)
         view.addSubview(paperButton)
