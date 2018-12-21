@@ -13,6 +13,7 @@
 		A9D9BAEA21CB20AA0072743A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D9BAE921CB20AA0072743A /* Assets.xcassets */; };
 		A9D9BAED21CB20AA0072743A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D9BAEB21CB20AA0072743A /* LaunchScreen.storyboard */; };
 		A9D9BAF621CB21A60072743A /* ZipCodeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D9BAF521CB21A60072743A /* ZipCodeTextFieldDelegate.swift */; };
+		A9D9BAF821CC47840072743A /* CashTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D9BAF721CC47840072743A /* CashTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A9D9BAEC21CB20AA0072743A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9D9BAEE21CB20AA0072743A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9D9BAF521CB21A60072743A /* ZipCodeTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeTextFieldDelegate.swift; sourceTree = "<group>"; };
+		A9D9BAF721CC47840072743A /* CashTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				A9D9BAF521CB21A60072743A /* ZipCodeTextFieldDelegate.swift */,
+				A9D9BAF721CC47840072743A /* CashTextFieldDelegate.swift */,
 			);
 			path = "Text Fields Delegates";
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9D9BAE521CB20A70072743A /* ViewController.swift in Sources */,
+				A9D9BAF821CC47840072743A /* CashTextFieldDelegate.swift in Sources */,
 				A9D9BAF621CB21A60072743A /* ZipCodeTextFieldDelegate.swift in Sources */,
 				A9D9BAE321CB20A70072743A /* AppDelegate.swift in Sources */,
 			);
