@@ -41,11 +41,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return self.editSwitch.isOn == true
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        
-        return true;
-    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        
+//        return true;
+//    }
 
 
 }
