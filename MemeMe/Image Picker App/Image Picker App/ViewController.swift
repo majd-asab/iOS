@@ -25,6 +25,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.textField.defaultTextAttributes = self.memeTextAttributes
+        // set the UITextField capitalization to allCharacters
+        self.textField.autocapitalizationType = UITextAutocapitalizationType.allCharacters
     }
     
     override func viewWillAppear(_ animated: Bool) {
