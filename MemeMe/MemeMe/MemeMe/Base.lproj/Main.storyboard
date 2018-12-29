@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="memeMeView" id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,11 @@
                                     <barButtonItem title="Album" id="Vks-gm-u5x">
                                         <connections>
                                             <action selector="pickImageFromAlbum" destination="BYZ-38-t0r" id="Bjd-3s-L3P"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Camera" id="hHo-6R-rfq">
+                                        <connections>
+                                            <action selector="pickImageFromCamera" destination="BYZ-38-t0r" id="vLN-c9-z3U"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -53,6 +58,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomTextField" destination="HZu-EB-zlH" id="TMS-xw-1rV"/>
+                        <outlet property="cameraButtonItem" destination="hHo-6R-rfq" id="Fff-Ba-UiK"/>
                         <outlet property="imageView" destination="Xhe-y0-LDL" id="QMY-gh-GGs"/>
                         <outlet property="topTextField" destination="g7I-Jc-SMs" id="6ol-lm-MLc"/>
                     </connections>

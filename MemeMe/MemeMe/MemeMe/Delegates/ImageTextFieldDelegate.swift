@@ -10,5 +10,19 @@ import Foundation
 import UIKit
 
 class ImageTextFieldDelegate: NSObject, UITextFieldDelegate {
+    var topTextTouched = false;
+    var bottomTextTouched = false;
     
+    // clear text field when user
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if !self.topTextTouched && textField.text == "TOP TEXT" {
+            textField.text = ""
+            self.topTextTouched = true
+        }
+        
+        if !self.bottomTextTouched && textField.text == "BOTTOM TEXT" {
+            textField.text = ""
+            self.bottomTextTouched = true
+        }
+    }
 }
