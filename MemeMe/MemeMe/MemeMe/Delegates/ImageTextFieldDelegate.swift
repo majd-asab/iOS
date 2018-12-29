@@ -25,4 +25,9 @@ class ImageTextFieldDelegate: NSObject, UITextFieldDelegate {
             self.bottomTextTouched = true
         }
     }
+    
+    // remove the keyboard when the user clicks return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
 }
