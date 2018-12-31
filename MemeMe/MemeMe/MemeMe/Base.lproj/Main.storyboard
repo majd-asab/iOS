@@ -35,7 +35,7 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xhe-y0-LDL">
-                                <rect key="frame" x="16" y="118" width="343" height="353"/>
+                                <rect key="frame" x="50" y="143" width="283" height="305"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g7I-Jc-SMs" customClass="CustomTextField" customModule="MemeMe" customModuleProvider="target">
@@ -60,6 +60,7 @@
                         <outlet property="bottomTextField" destination="HZu-EB-zlH" id="TMS-xw-1rV"/>
                         <outlet property="cameraButtonItem" destination="hHo-6R-rfq" id="Fff-Ba-UiK"/>
                         <outlet property="imageView" destination="Xhe-y0-LDL" id="QMY-gh-GGs"/>
+                        <outlet property="toolbar" destination="qPv-zt-qLU" id="4HH-hL-Ilv"/>
                         <outlet property="topTextField" destination="g7I-Jc-SMs" id="6ol-lm-MLc"/>
                     </connections>
                 </viewController>

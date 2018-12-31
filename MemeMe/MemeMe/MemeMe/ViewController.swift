@@ -14,6 +14,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var topTextField: CustomTextField!
     @IBOutlet weak var bottomTextField: CustomTextField!
     @IBOutlet weak var cameraButtonItem: UIBarButtonItem!
+    @IBOutlet weak var toolbar: UIToolbar!
     
     
     // MARK: Delegate class instances
@@ -35,6 +36,51 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.cameraButtonItem.isEnabled = false
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        subscribeToKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        unsubscribeFromKeyboardNotifications()
+    }
+    
+    
+    // MARK: subscribe to notification center and listen to keyboard will show
+    func subscribeToKeyboardNotifications() {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    // MARK: unsubscribe to notification center and listening to keyboard
+    func unsubscribeFromKeyboardNotifications() {
+        
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(_ notification:Notification) {
+        // check and only shift the view if its the bottom textfield
+        if self.bottomTextField.isFirstResponder {
+            view.frame.origin.y -= getKeyboardHeight(notification)
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification:Notification) {
+        if self.bottomTextField.isFirstResponder {
+            view.frame.origin.y = 0.0
+        }
+    }
+    
+    func getKeyboardHeight(_ notification:Notification) -> CGFloat {
+        
+        let userInfo = notification.userInfo
+        let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue // of CGRect
+        return keyboardSize.cgRectValue.height
     }
     
     // MARK: function to set default text for textfields
@@ -77,9 +123,34 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.dismiss(animated: true, completion: nil)
     }
     
+    struct Meme {
+        var topText: String
+        var bottomText: String
+        var originalImage: UIImage
+        var memedImage: UIImage
+    }
     
+    // MARK: function to generat image from view hierarchy
+    func generatedMemeView() -> UIImage {
+        // hiding subviews
+        self.toolbar.isHidden = true
+        
+        //render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        // show subviews
+        self.toolbar.isHidden = false
+        
+        return memedImage
+    }
     
-
+    // MARK: save the memed image
+    func save() {
+        let meme = Meme(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, memedImage: generatedMemeView())
+    }
 
 }
 
