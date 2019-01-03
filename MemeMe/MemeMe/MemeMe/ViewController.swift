@@ -148,9 +148,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     // MARK: save the memed image
-    func save() {
-        let meme = Meme(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, memedImage: generatedMemeView())
+    func save() -> Meme {
+        return Meme(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: self.imageView.image!, memedImage: generatedMemeView())
     }
-
+    
+    // MARK: function to share meme
+   @IBAction func shareMeme() {
+        
+        let meme = self.save()
+        
+        let activityController = UIActivityViewController(activityItems: [meme.memedImage], applicationActivities: nil)
+    
+        // you can add a close to be executed once the user is done with the UIActivity controller
+        activityController.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, activityError: Error?) in
+            if !completed {
+                print("user dismissed activity controller")
+                return
+            }
+            if let at = activityType {
+                print(at)
+            }
+            
+        }
+    
+        self.present(activityController, animated: true, completion: nil)
+    }
 }
 

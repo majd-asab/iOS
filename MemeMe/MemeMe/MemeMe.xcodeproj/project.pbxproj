@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A96AA8AE21D5C9FB00BA4526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AA8AD21D5C9FB00BA4526 /* AppDelegate.swift */; };
-		A96AA8B021D5C9FB00BA4526 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AA8AF21D5C9FB00BA4526 /* ViewController.swift */; };
 		A96AA8B321D5C9FB00BA4526 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96AA8B121D5C9FB00BA4526 /* Main.storyboard */; };
 		A96AA8B521D5C9FE00BA4526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A96AA8B421D5C9FE00BA4526 /* Assets.xcassets */; };
 		A96AA8B821D5C9FE00BA4526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96AA8B621D5C9FE00BA4526 /* LaunchScreen.storyboard */; };
 		A96AA8C121D5D89900BA4526 /* ImageTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AA8C021D5D89900BA4526 /* ImageTextFieldDelegate.swift */; };
 		A96AA8C521D5E48E00BA4526 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AA8C421D5E48E00BA4526 /* CustomTextField.swift */; };
+		A96AA8C621DDB7C500BA4526 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AA8AF21D5C9FB00BA4526 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,8 +158,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A96AA8C521D5E48E00BA4526 /* CustomTextField.swift in Sources */,
-				A96AA8B021D5C9FB00BA4526 /* ViewController.swift in Sources */,
 				A96AA8AE21D5C9FB00BA4526 /* AppDelegate.swift in Sources */,
+				A96AA8C621DDB7C500BA4526 /* ViewController.swift in Sources */,
 				A96AA8C121D5D89900BA4526 /* ImageTextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
