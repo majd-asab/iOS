@@ -165,10 +165,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 print("user dismissed activity controller")
                 return
             }
-            if let at = activityType {
-                print(at)
-            }
-            
         }
     
         self.present(activityController, animated: true, completion: nil)
