@@ -21,6 +21,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4z-zr-DAt">
                                 <rect key="frame" x="330" y="832" width="64" height="30"/>
                                 <state key="normal" title="Click me!"/>
+                                <connections>
+                                    <segue destination="2Yp-7W-d9r" kind="show" id="GzM-2I-Ofm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Auto Layout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcH-QA-CVz">
                                 <rect key="frame" x="94" y="37" width="187" height="21"/>
@@ -39,6 +42,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P4z-zr-DAt" secondAttribute="bottom" id="2AV-bY-Zwg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P4z-zr-DAt" secondAttribute="bottom" id="2Vb-cq-LoE"/>
                             <constraint firstItem="DJq-Me-thB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ARh-ly-HhI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P4z-zr-DAt" secondAttribute="trailing" constant="20" id="XjS-Qp-swD"/>
                             <constraint firstItem="OcH-QA-CVz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ejB-94-Y8e"/>
@@ -51,8 +55,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="v9w-7O-fQW">
+            <objects>
+                <viewController id="2Yp-7W-d9r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xBb-Gw-RkC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Johnny" translatesAutoresizingMaskIntoConstraints="NO" id="I5u-DS-tjr">
+                                <rect key="frame" x="20" y="187" width="115" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="Nwt-qB-Qx8"/>
+                                    <constraint firstAttribute="height" constant="128" id="l94-pZ-NEJ"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9AW-C9-K78">
+                                <rect key="frame" x="170" y="187" width="224" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="0be-HT-HbF"/>
+                                    <constraint firstAttribute="height" constant="128" id="8wb-ZR-zBE"/>
+                                </constraints>
+                                <string key="text">ou probably know me but I will still introduce myself. I am Johnny Bravo. I am your friendly funny classic cartoon guy. I bet you don’t know this but I love Swift! It’s really amazing!!! I like my code swifty :wink: </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQJ-fo-2VA">
+                                <rect key="frame" x="185" y="433" width="44" height="30"/>
+                                <state key="normal" title="OKAY!"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1bs-3s-Fo3" firstAttribute="trailing" secondItem="9AW-C9-K78" secondAttribute="trailing" constant="20" id="B7q-aH-3NN"/>
+                            <constraint firstItem="zQJ-fo-2VA" firstAttribute="centerY" secondItem="xBb-Gw-RkC" secondAttribute="centerY" id="Csc-6z-ZdO"/>
+                            <constraint firstItem="zQJ-fo-2VA" firstAttribute="centerX" secondItem="xBb-Gw-RkC" secondAttribute="centerX" id="GJI-eK-p4u"/>
+                            <constraint firstItem="9AW-C9-K78" firstAttribute="top" secondItem="1bs-3s-Fo3" secondAttribute="top" constant="143" id="SZA-ro-qDf"/>
+                            <constraint firstItem="I5u-DS-tjr" firstAttribute="top" secondItem="1bs-3s-Fo3" secondAttribute="top" constant="143" id="WnI-Ar-ZYK"/>
+                            <constraint firstItem="I5u-DS-tjr" firstAttribute="leading" secondItem="1bs-3s-Fo3" secondAttribute="leading" constant="20" id="XtR-pE-Phe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1bs-3s-Fo3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbU-Ty-c3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="26.785714285714285"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Excited" width="500" height="600"/>
+        <image name="Johnny" width="233" height="500"/>
     </resources>
 </document>
