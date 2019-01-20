@@ -24,6 +24,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return self.allVillains.count
     }
     
+
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "VillainCell")!
@@ -43,5 +45,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let villainInfo = self.allVillains[indexPath.row]
+        
+        // instantiate villain VC detail and set property
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: "VillainDetailVC") as! VillainDetailViewController
+        detailVC.villainProperty = villainInfo
+        
+        // segue to detail VC
+        self.navigationController?.pushViewController(detailVC, animated: true)
+        
     }
 }
