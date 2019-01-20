@@ -22,5 +22,9 @@ class MYOAViewController: UIViewController {
             navController.popToRootViewController(animated: true)
         }
     }
+    
+    deinit {
+        print("VC poped off stack")
+    }
 
 }
