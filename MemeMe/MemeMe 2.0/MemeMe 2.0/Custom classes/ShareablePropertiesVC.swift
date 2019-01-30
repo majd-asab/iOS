@@ -1,14 +1,14 @@
 //
-//  SentMemesVC.swift
+//  ShareablePropertiesVC.swift
 //  MemeMe 2.0
 //
-//  Created by Majd on 2019-01-28.
+//  Created by Majd on 2019-01-30.
 //  Copyright © 2019 HappyWorld. All rights reserved.
 //
 
 import UIKit
 
-class SentMemesVC: UIViewController {
+class ShareablePropertiesVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

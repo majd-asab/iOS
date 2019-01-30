@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionVC: UIViewController {
+class CollectionViewVC: UIViewController {
 
     // Accessing memes array via computed property
     var memes: [Meme]! {
