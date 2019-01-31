@@ -14,17 +14,13 @@ class ShareablePropertiesVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "Sent Memes"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newMeme))
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   @IBAction func newMeme() {
+        let newMemeVC = storyboard?.instantiateViewController(withIdentifier: "CreateMemeVC") as! CreateMemeVC
+    
+    self.present(newMemeVC, animated: true, completion: nil)
     }
-    */
-
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewVC: UIViewController {
+class CollectionViewVC: ShareablePropertiesVC {
 
     // Accessing memes array via computed property
     var memes: [Meme]! {
@@ -21,6 +21,7 @@ class CollectionViewVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+         
     }
 
 }
