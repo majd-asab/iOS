@@ -9,7 +9,7 @@
 import UIKit
 
 class ShareablePropertiesVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +20,7 @@ class ShareablePropertiesVC: UIViewController {
     
    @IBAction func newMeme() {
         let newMemeVC = storyboard?.instantiateViewController(withIdentifier: "CreateMemeVC") as! CreateMemeVC
-    
-    self.present(newMemeVC, animated: true, completion: nil)
+        newMemeVC.presenter = self
+        self.present(newMemeVC, animated: true, completion: nil)
     }
 }

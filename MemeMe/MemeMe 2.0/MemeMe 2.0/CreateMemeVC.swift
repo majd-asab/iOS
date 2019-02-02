@@ -10,7 +10,6 @@ import UIKit
 
 class CreateMemeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var topTextField: CustomTextField!
     @IBOutlet weak var bottomTextField: CustomTextField!
@@ -18,6 +17,7 @@ class CreateMemeVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var topNavBar: UINavigationBar!
     
+    var presenter: ShareablePropertiesVC?
     
     // MARK: Delegate class instances
     
@@ -187,8 +187,8 @@ class CreateMemeVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     }
     
     // MARK: dismiss modal VC
-   @IBAction func dismissVC(){
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func dismissVC(){
+        self.dismiss(animated: true)
     }
 }
 

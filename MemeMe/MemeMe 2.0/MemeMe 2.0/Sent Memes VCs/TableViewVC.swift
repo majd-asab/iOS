@@ -10,15 +10,21 @@ import UIKit
 
 class TableViewVC: ShareablePropertiesVC, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     var memes =  [Meme]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       self.memes = getMemesArray()
+        self.memes = getMemesArray()
+        self.tableView.reloadData()
     }
     
     func getMemesArray() -> [Meme] {
