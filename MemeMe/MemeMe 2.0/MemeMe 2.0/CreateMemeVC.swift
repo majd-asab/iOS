@@ -17,7 +17,6 @@ class CreateMemeVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var topNavBar: UINavigationBar!
     
-    var presenter: ShareablePropertiesVC?
     
     // MARK: Delegate class instances
     
@@ -145,7 +144,9 @@ class CreateMemeVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         //render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
-        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+//        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        view.drawHierarchy(in: self.imageView.frame, afterScreenUpdates: true)
+
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         

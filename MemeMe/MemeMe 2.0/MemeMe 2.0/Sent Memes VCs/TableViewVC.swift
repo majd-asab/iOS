@@ -8,18 +8,18 @@
 
 import UIKit
 
-class TableViewVC: ShareablePropertiesVC, UITableViewDelegate, UITableViewDataSource {
+class TableViewVC: UIViewController, UITableViewDelegate, UITableViewDataSource,ShareableNavigationBar {
 
     @IBOutlet weak var tableView: UITableView!
     
     var memes =  [Meme]()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
+        // Do any additional setup after loading the view.
+        setupNavigationBar(title: "Sent Memes")
         tableView.dataSource = self
         tableView.delegate = self
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +48,21 @@ class TableViewVC: ShareablePropertiesVC, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+    
+    // setting the title and the right button to trigger new meme func
+    func setupNavigationBar(title: String) {
+        self.navigationItem.title = title
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(newMeme))
+    }
+    
+    // func to present the create new meme
+    @objc func newMeme() {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "CreateMemeVC") as! CreateMemeVC
+        self.present(controller, animated: true)
     }
 
 }

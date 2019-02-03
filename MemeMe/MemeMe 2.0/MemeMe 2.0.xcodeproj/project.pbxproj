@@ -18,7 +18,7 @@
 		A96AA9302200069A00BA4526 /* TableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AA92F2200069A00BA4526 /* TableViewVC.swift */; };
 		A96AA932220006AD00BA4526 /* CollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AA931220006AD00BA4526 /* CollectionViewVC.swift */; };
 		A96AA93522016A8200BA4526 /* CreateMemeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AA93422016A8200BA4526 /* CreateMemeVC.swift */; };
-		A96AA937220183F300BA4526 /* ShareablePropertiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AA936220183F300BA4526 /* ShareablePropertiesVC.swift */; };
+		A96AA9392205761600BA4526 /* ShareableProtocolAndExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96AA9382205761600BA4526 /* ShareableProtocolAndExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		A96AA92F2200069A00BA4526 /* TableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; };
 		A96AA931220006AD00BA4526 /* CollectionViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewVC.swift; sourceTree = "<group>"; };
 		A96AA93422016A8200BA4526 /* CreateMemeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMemeVC.swift; sourceTree = "<group>"; };
-		A96AA936220183F300BA4526 /* ShareablePropertiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareablePropertiesVC.swift; sourceTree = "<group>"; };
+		A96AA9382205761600BA4526 /* ShareableProtocolAndExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareableProtocolAndExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 				A96AA91E21FFFCFC00BA4526 /* LaunchScreen.storyboard */,
 				A96AA92121FFFCFC00BA4526 /* Info.plist */,
 				A96AA9332201692300BA4526 /* Sent Memes VCs */,
-				A96AA92C21FFFF4C00BA4526 /* Custom classes */,
+				A96AA92C21FFFF4C00BA4526 /* Custom */,
 				A96AA92921FFFE7900BA4526 /* Delegates */,
 			);
 			path = "MemeMe 2.0";
@@ -90,14 +90,14 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
-		A96AA92C21FFFF4C00BA4526 /* Custom classes */ = {
+		A96AA92C21FFFF4C00BA4526 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
 				A96AA92721FFFD7700BA4526 /* MemeObject.swift */,
 				A96AA92D21FFFF7100BA4526 /* CustomTextField.swift */,
-				A96AA936220183F300BA4526 /* ShareablePropertiesVC.swift */,
+				A96AA9382205761600BA4526 /* ShareableProtocolAndExtension.swift */,
 			);
-			path = "Custom classes";
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		A96AA9332201692300BA4526 /* Sent Memes VCs */ = {
@@ -185,10 +185,10 @@
 				A96AA9302200069A00BA4526 /* TableViewVC.swift in Sources */,
 				A96AA92B21FFFEA000BA4526 /* ImageTextFieldDelegate.swift in Sources */,
 				A96AA932220006AD00BA4526 /* CollectionViewVC.swift in Sources */,
-				A96AA937220183F300BA4526 /* ShareablePropertiesVC.swift in Sources */,
 				A96AA91621FFFCFA00BA4526 /* AppDelegate.swift in Sources */,
 				A96AA93522016A8200BA4526 /* CreateMemeVC.swift in Sources */,
 				A96AA92E21FFFF7100BA4526 /* CustomTextField.swift in Sources */,
+				A96AA9392205761600BA4526 /* ShareableProtocolAndExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
