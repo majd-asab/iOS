@@ -144,9 +144,14 @@ class CreateMemeVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         //render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
-//        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
-        view.drawHierarchy(in: self.imageView.frame, afterScreenUpdates: true)
-
+        
+        // crop whitespace
+        let croppedFrame = CGRect(
+            x: 0,
+            y: -10, // inorder to remove whitespace from view
+            width: self.view.frame.width,
+            height: self.view.frame.height)
+        view.drawHierarchy(in: croppedFrame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         

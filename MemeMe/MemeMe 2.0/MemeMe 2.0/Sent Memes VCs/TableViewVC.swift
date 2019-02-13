@@ -48,6 +48,11 @@ class TableViewVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "DetailedMemeVC") as! DetailedMemeVC
+        let meme = self.memes[indexPath.row]
+        controller.meme = meme
+        self.navigationController?.pushViewController(controller, animated: true)
+        
     }
     
     // setting the title and the right button to trigger new meme func
