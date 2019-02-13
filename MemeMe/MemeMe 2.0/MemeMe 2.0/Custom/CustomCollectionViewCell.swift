@@ -9,7 +9,9 @@
 import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
-
+    
+    @IBOutlet weak var collectionMemeLabel : UILabel!
     @IBOutlet weak var collectionMemeImageView : UIImageView!
+    
 
 }

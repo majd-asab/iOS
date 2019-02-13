@@ -15,10 +15,24 @@ class CollectionViewVC: UICollectionViewController, ShareableNavigationBar {
     // Accessing memes array via computed property
     var memes = [Meme]()
     
+    // control items in grid
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         setupNavigationBar(title: "Sent Memes")
+        
+        // organize the items in the grid
+        let space:CGFloat = 3.0
+        let dimension = (view.frame.size.width - (2 * space)) / 3.0
+        
+        flowLayout.minimumInteritemSpacing = space // space between items in the same row
+        flowLayout.minimumLineSpacing = space // space between rows
+        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,6 +60,7 @@ class CollectionViewVC: UICollectionViewController, ShareableNavigationBar {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CustomCollectionViewCell
         let meme = self.memes[indexPath.row]
         
+        cell.collectionMemeLabel.text = meme.topText
         cell.collectionMemeImageView.image = meme.memedImage
         
         return cell
