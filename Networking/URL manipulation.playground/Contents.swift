@@ -18,3 +18,17 @@ if var validUrl = url {
 }
 // we suggest you print out your URL to verify the result
 
+
+// create a new URLComponents
+var newUrl = URLComponents()
+
+// set the scheme
+newUrl.scheme = "https"
+// set the host
+newUrl.host = "google.com"
+// set the path
+newUrl.path = "/search"
+// set the query, you'll need to create a new URLQueryItem
+newUrl.queryItems = [URLQueryItem(name: "query", value: "udacity")]
+// print the url to verify (URLComponents has a property called "url")
+print(newUrl.url ?? "didn't work")
