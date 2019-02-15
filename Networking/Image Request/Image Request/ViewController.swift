@@ -43,7 +43,36 @@ class ViewController: UIViewController {
         task.resume()
     }
     
-   
+    @IBAction func openFromFileButton(_ sender: Any) {
+        guard let imageUrl = URL(string: self.imageLocation) else {
+            print("cannot create URL from string")
+            return
+        }
+        
+        let task = URLSession.shared.downloadTask(with: imageUrl) {(location, response, error) in
+            guard let location = location else {
+                print("location not retrievable")
+                return
+            }
+            
+            do {
+                // get data from file
+                let imageData = try Data(contentsOf: location)
+                
+                // load data in UIImage
+                let image = UIImage(data: imageData)
+                
+                // update storyboard
+                DispatchQueue.main.async {
+                    self.imageView.image = image
+                }
+            } catch {
+                print("error loading image from file: \(error)")
+            }
+        }
+        task.resume()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
