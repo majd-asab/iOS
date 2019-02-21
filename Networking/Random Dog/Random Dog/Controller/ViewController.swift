@@ -8,14 +8,49 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
 
     @IBOutlet weak var dogImageView: UIImageView!
+    @IBOutlet weak var breedPicker: UIPickerView!
+    
+    var breeds: [String] = ["poodle", "greyhound"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        DogAPI.requestRandomImage(completionHandler: handleRandomImageRequest(imageData:error:))
+        breedPicker.delegate = self
+        breedPicker.dataSource = self
+        
+        DogAPI().requestAllBreeds(completionHandler: handleRequestAllBreeds(breedsList:error:))
+    }
+    
+    // handler function to assign the breeds list to "breeds" class array
+    func handleRequestAllBreeds(breedsList: [String]?,error: Error?) {
+        guard let breedsList = breedsList else {
+            print("Failed to get breeds list")
+            return
+        }
+        self.breeds = breedsList
+        DispatchQueue.main.async {
+            self.breedPicker.reloadAllComponents()
+        }
+    }
+    // functions to conform to UIPicker
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return breeds.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return breeds[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        DogAPI.requestRandomImage(breed: breeds[row], completionHandler: handleRandomImageRequest(imageData:error:))
     }
 
     // helper function to pass image url to image file request func
