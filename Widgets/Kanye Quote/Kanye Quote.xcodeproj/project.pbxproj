@@ -12,21 +12,24 @@
 		A91A0E5E224F078500E9481D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91A0E5C224F078500E9481D /* Main.storyboard */; };
 		A91A0E60224F078600E9481D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91A0E5F224F078600E9481D /* Assets.xcassets */; };
 		A91A0E63224F078600E9481D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91A0E61224F078600E9481D /* LaunchScreen.storyboard */; };
-		A91A0E6D224F083700E9481D /* KanyeQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A0E6C224F083700E9481D /* KanyeQuote.swift */; };
-		A91A0E6F224F085800E9481D /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A0E6E224F085800E9481D /* NetworkLayer.swift */; };
-		A91A0E77224F0ADF00E9481D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91A0E76224F0ADF00E9481D /* NotificationCenter.framework */; };
-		A91A0E7A224F0ADF00E9481D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A0E79224F0ADF00E9481D /* TodayViewController.swift */; };
-		A91A0E7D224F0ADF00E9481D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91A0E7B224F0ADF00E9481D /* MainInterface.storyboard */; };
-		A91A0E81224F0ADF00E9481D /* Kanye Quote Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A91A0E74224F0ADE00E9481D /* Kanye Quote Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A91A0E8D2250089400E9481D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91A0E76224F0ADF00E9481D /* NotificationCenter.framework */; };
+		A91A0E902250089400E9481D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A0E8F2250089400E9481D /* TodayViewController.swift */; };
+		A91A0E932250089400E9481D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91A0E912250089400E9481D /* MainInterface.storyboard */; };
+		A91A0E972250089400E9481D /* Quote Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A91A0E8C2250089300E9481D /* Quote Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A91A0E9D225022CF00E9481D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91A0E5F224F078600E9481D /* Assets.xcassets */; };
+		A91A0E9E225027A300E9481D /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A0E6E224F085800E9481D /* NetworkLayer.swift */; };
+		A91A0E9F225027A300E9481D /* KanyeQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A0E6C224F083700E9481D /* KanyeQuote.swift */; };
+		A91A0EA0225027D600E9481D /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A0E6E224F085800E9481D /* NetworkLayer.swift */; };
+		A91A0EA1225027D600E9481D /* KanyeQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91A0E6C224F083700E9481D /* KanyeQuote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A91A0E7F224F0ADF00E9481D /* PBXContainerItemProxy */ = {
+		A91A0E952250089400E9481D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A91A0E4D224F078500E9481D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A91A0E73224F0ADE00E9481D;
-			remoteInfo = "Kanye Quote Widget";
+			remoteGlobalIDString = A91A0E8B2250089300E9481D;
+			remoteInfo = "Quote Widget";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -37,7 +40,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A91A0E81224F0ADF00E9481D /* Kanye Quote Widget.appex in Embed App Extensions */,
+				A91A0E972250089400E9481D /* Quote Widget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,11 +57,11 @@
 		A91A0E64224F078600E9481D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A91A0E6C224F083700E9481D /* KanyeQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanyeQuote.swift; sourceTree = "<group>"; };
 		A91A0E6E224F085800E9481D /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
-		A91A0E74224F0ADE00E9481D /* Kanye Quote Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Kanye Quote Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91A0E76224F0ADF00E9481D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		A91A0E79224F0ADF00E9481D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		A91A0E7C224F0ADF00E9481D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		A91A0E7E224F0ADF00E9481D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A91A0E8C2250089300E9481D /* Quote Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Quote Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A91A0E8F2250089400E9481D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		A91A0E922250089400E9481D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A91A0E942250089400E9481D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +72,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A91A0E71224F0ADE00E9481D /* Frameworks */ = {
+		A91A0E892250089300E9481D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A91A0E77224F0ADF00E9481D /* NotificationCenter.framework in Frameworks */,
+				A91A0E8D2250089400E9481D /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				A91A0E57224F078500E9481D /* Kanye Quote */,
-				A91A0E78224F0ADF00E9481D /* Kanye Quote Widget */,
+				A91A0E8E2250089400E9481D /* Quote Widget */,
 				A91A0E75224F0ADF00E9481D /* Frameworks */,
 				A91A0E56224F078500E9481D /* Products */,
 			);
@@ -94,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				A91A0E55224F078500E9481D /* Kanye Quote.app */,
-				A91A0E74224F0ADE00E9481D /* Kanye Quote Widget.appex */,
+				A91A0E8C2250089300E9481D /* Quote Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,9 +118,9 @@
 		A91A0E6A224F078F00E9481D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A91A0E58224F078500E9481D /* AppDelegate.swift */,
-				A91A0E6C224F083700E9481D /* KanyeQuote.swift */,
 				A91A0E6E224F085800E9481D /* NetworkLayer.swift */,
+				A91A0E6C224F083700E9481D /* KanyeQuote.swift */,
+				A91A0E58224F078500E9481D /* AppDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,14 +141,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A91A0E78224F0ADF00E9481D /* Kanye Quote Widget */ = {
+		A91A0E8E2250089400E9481D /* Quote Widget */ = {
 			isa = PBXGroup;
 			children = (
-				A91A0E79224F0ADF00E9481D /* TodayViewController.swift */,
-				A91A0E7B224F0ADF00E9481D /* MainInterface.storyboard */,
-				A91A0E7E224F0ADF00E9481D /* Info.plist */,
+				A91A0E8F2250089400E9481D /* TodayViewController.swift */,
+				A91A0E912250089400E9481D /* MainInterface.storyboard */,
+				A91A0E942250089400E9481D /* Info.plist */,
 			);
-			path = "Kanye Quote Widget";
+			path = "Quote Widget";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,28 +166,28 @@
 			buildRules = (
 			);
 			dependencies = (
-				A91A0E80224F0ADF00E9481D /* PBXTargetDependency */,
+				A91A0E962250089400E9481D /* PBXTargetDependency */,
 			);
 			name = "Kanye Quote";
 			productName = "Kanye Quote";
 			productReference = A91A0E55224F078500E9481D /* Kanye Quote.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A91A0E73224F0ADE00E9481D /* Kanye Quote Widget */ = {
+		A91A0E8B2250089300E9481D /* Quote Widget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A91A0E82224F0ADF00E9481D /* Build configuration list for PBXNativeTarget "Kanye Quote Widget" */;
+			buildConfigurationList = A91A0E982250089400E9481D /* Build configuration list for PBXNativeTarget "Quote Widget" */;
 			buildPhases = (
-				A91A0E70224F0ADE00E9481D /* Sources */,
-				A91A0E71224F0ADE00E9481D /* Frameworks */,
-				A91A0E72224F0ADE00E9481D /* Resources */,
+				A91A0E882250089300E9481D /* Sources */,
+				A91A0E892250089300E9481D /* Frameworks */,
+				A91A0E8A2250089300E9481D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Kanye Quote Widget";
-			productName = "Kanye Quote Widget";
-			productReference = A91A0E74224F0ADE00E9481D /* Kanye Quote Widget.appex */;
+			name = "Quote Widget";
+			productName = "Quote Widget";
+			productReference = A91A0E8C2250089300E9481D /* Quote Widget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -200,7 +203,7 @@
 					A91A0E54224F078500E9481D = {
 						CreatedOnToolsVersion = 10.2;
 					};
-					A91A0E73224F0ADE00E9481D = {
+					A91A0E8B2250089300E9481D = {
 						CreatedOnToolsVersion = 10.2;
 					};
 				};
@@ -219,7 +222,7 @@
 			projectRoot = "";
 			targets = (
 				A91A0E54224F078500E9481D /* Kanye Quote */,
-				A91A0E73224F0ADE00E9481D /* Kanye Quote Widget */,
+				A91A0E8B2250089300E9481D /* Quote Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -235,11 +238,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A91A0E72224F0ADE00E9481D /* Resources */ = {
+		A91A0E8A2250089300E9481D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A91A0E7D224F0ADF00E9481D /* MainInterface.storyboard in Resources */,
+				A91A0E9D225022CF00E9481D /* Assets.xcassets in Resources */,
+				A91A0E932250089400E9481D /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,28 +254,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A91A0E6F224F085800E9481D /* NetworkLayer.swift in Sources */,
+				A91A0E9E225027A300E9481D /* NetworkLayer.swift in Sources */,
+				A91A0E9F225027A300E9481D /* KanyeQuote.swift in Sources */,
 				A91A0E5B224F078500E9481D /* ViewController.swift in Sources */,
 				A91A0E59224F078500E9481D /* AppDelegate.swift in Sources */,
-				A91A0E6D224F083700E9481D /* KanyeQuote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A91A0E70224F0ADE00E9481D /* Sources */ = {
+		A91A0E882250089300E9481D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A91A0E7A224F0ADF00E9481D /* TodayViewController.swift in Sources */,
+				A91A0EA0225027D600E9481D /* NetworkLayer.swift in Sources */,
+				A91A0EA1225027D600E9481D /* KanyeQuote.swift in Sources */,
+				A91A0E902250089400E9481D /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A91A0E80224F0ADF00E9481D /* PBXTargetDependency */ = {
+		A91A0E962250089400E9481D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A91A0E73224F0ADE00E9481D /* Kanye Quote Widget */;
-			targetProxy = A91A0E7F224F0ADF00E9481D /* PBXContainerItemProxy */;
+			target = A91A0E8B2250089300E9481D /* Quote Widget */;
+			targetProxy = A91A0E952250089400E9481D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -292,10 +298,10 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		A91A0E7B224F0ADF00E9481D /* MainInterface.storyboard */ = {
+		A91A0E912250089400E9481D /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A91A0E7C224F0ADF00E9481D /* Base */,
+				A91A0E922250089400E9481D /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -455,17 +461,17 @@
 			};
 			name = Release;
 		};
-		A91A0E83224F0ADF00E9481D /* Debug */ = {
+		A91A0E992250089400E9481D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Kanye Quote Widget/Info.plist";
+				INFOPLIST_FILE = "Quote Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happyworld.Kanye-Quote.Kanye-Quote-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happyworld.Kanye-Quote.Quote-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -473,17 +479,17 @@
 			};
 			name = Debug;
 		};
-		A91A0E84224F0ADF00E9481D /* Release */ = {
+		A91A0E9A2250089400E9481D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Kanye Quote Widget/Info.plist";
+				INFOPLIST_FILE = "Quote Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happyworld.Kanye-Quote.Kanye-Quote-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happyworld.Kanye-Quote.Quote-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -512,11 +518,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A91A0E82224F0ADF00E9481D /* Build configuration list for PBXNativeTarget "Kanye Quote Widget" */ = {
+		A91A0E982250089400E9481D /* Build configuration list for PBXNativeTarget "Quote Widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A91A0E83224F0ADF00E9481D /* Debug */,
-				A91A0E84224F0ADF00E9481D /* Release */,
+				A91A0E992250089400E9481D /* Debug */,
+				A91A0E9A2250089400E9481D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

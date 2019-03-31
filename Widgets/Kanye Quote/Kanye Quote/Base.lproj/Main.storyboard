@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kanye_Quote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oh2-OA-NVo">
+                                <rect key="frame" x="20" y="453" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kanye" translatesAutoresizingMaskIntoConstraints="NO" id="rvH-9B-CXZ">
+                                <rect key="frame" x="87" y="150" width="240" height="138"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API and image credit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uw-F1-5oR">
+                                <rect key="frame" x="126" y="726" width="163" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfL-Qb-vsK">
+                                <rect key="frame" x="145" y="770" width="125" height="40.5"/>
+                                <state key="normal" title="https://kanye.rest/"/>
+                                <connections>
+                                    <action selector="creditsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7jy-pJ-vSk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rvH-9B-CXZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="1J1-9V-wIq"/>
+                            <constraint firstItem="oh2-OA-NVo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="1JW-Br-eVS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CfL-Qb-vsK" secondAttribute="trailing" constant="144" id="1WN-Dg-cwW"/>
+                            <constraint firstItem="CfL-Qb-vsK" firstAttribute="top" secondItem="5uw-F1-5oR" secondAttribute="bottom" constant="23" id="2h3-HK-hbe"/>
+                            <constraint firstItem="rvH-9B-CXZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="106" id="H4i-7M-m8y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rvH-9B-CXZ" secondAttribute="trailing" constant="87" id="MGb-Kd-4sj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5uw-F1-5oR" secondAttribute="trailing" constant="125" id="TYM-0Z-WHo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CfL-Qb-vsK" secondAttribute="bottom" constant="51.5" id="Vr4-gc-m64"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oh2-OA-NVo" secondAttribute="trailing" constant="20" id="Won-Io-B6G"/>
+                            <constraint firstItem="5uw-F1-5oR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="fEA-Yg-KQ3"/>
+                            <constraint firstItem="oh2-OA-NVo" firstAttribute="top" secondItem="rvH-9B-CXZ" secondAttribute="bottom" constant="165" id="gqd-fP-m4j"/>
+                            <constraint firstItem="CfL-Qb-vsK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="hzR-As-yAa"/>
+                            <constraint firstItem="5uw-F1-5oR" firstAttribute="top" secondItem="oh2-OA-NVo" secondAttribute="bottom" constant="273" id="o9Q-Yf-a7q"/>
+                            <constraint firstItem="oh2-OA-NVo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yf9-pj-aJR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="widgetLabel" destination="oh2-OA-NVo" id="YWE-Jy-yMo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="73.660714285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Kanye" width="180" height="180"/>
+    </resources>
 </document>

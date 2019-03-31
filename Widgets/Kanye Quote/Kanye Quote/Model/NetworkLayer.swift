@@ -22,7 +22,9 @@ struct NetworkLayer {
                 completion(nil,error)
                 return
             }
-            completion(data,nil)
+            DispatchQueue.main.async {
+                completion(data,nil)
+            }
         }
         task.resume()
     }
